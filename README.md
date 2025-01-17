@@ -1,2 +1,2 @@
-# rhel-good-practices
-Red Hat Enterprise Linux Community of Practice
+# Welcome to RHEL Good Practices
+Work in progress. Check back later.
