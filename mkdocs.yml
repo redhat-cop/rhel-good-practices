@@ -1,0 +1,50 @@
+site_name: Red Hat Enterprise Linux Good Practices
+repo_url: https://github.com/redhat-cop/redhat-image-mode-demo/
+edit_uri: blob/main/
+site_author: Alessandro Rossi (alerossi@redhat.com) - Magnus Glantz (mglantz@redhat.com) - Rick Greene (rgreene@redhat.com) - Sam Wachira (swachira@redhat.com)
+site_description: Web Page for the Red Hat Enterprise Linux Good Practices repository
+theme:
+  name: material
+  favicon: assets/logo.png
+  logo: assets/logo.png
+  font:
+    text: Red Hat Display
+  features:
+    - content.code.copy
+    - navigation.expand
+    - content.tooltips
+  palette:
+    - scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+extra_css:
+  - assets/stylesheets/extra.css
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Contributing to the project: contributing.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: !relative $config_dir
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji
+  - abbr
+plugins:
+  - macros
+
