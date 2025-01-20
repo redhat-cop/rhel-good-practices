@@ -1,5 +1,5 @@
 site_name: Red Hat Enterprise Linux Good Practices
-repo_url: https://github.com/redhat-cop/redhat-image-mode-demo/
+repo_url: https://github.com/redhat-cop/rhel-good-practices/
 edit_uri: blob/main/
 site_author: Alessandro Rossi (alerossi@redhat.com) - Magnus Glantz (mglantz@redhat.com) - Rick Greene (rgreene@redhat.com) - Sam Wachira (swachira@redhat.com)
 site_description: Web Page for the Red Hat Enterprise Linux Good Practices repository
