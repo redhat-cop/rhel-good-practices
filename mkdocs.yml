@@ -30,6 +30,8 @@ nav:
   - Home: index.md
   - Getting Started:
     - Contributing to the project: contributing.md
+  - Security:
+    - Welcome to security: security/welcome.md
 markdown_extensions:
   - admonition
   - pymdownx.details
