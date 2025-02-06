@@ -29,7 +29,8 @@ extra_css:
 nav:
   - Home: index.md
   - Getting Started:
-    - Contributing to the project: contributing.md
+    - Contributing to the project: contribute/contributing.md
+    - Contributing guidelines: contribute/contribution-guidelines.md
   - Security:
     - Welcome to security: security/welcome.md
 markdown_extensions:
