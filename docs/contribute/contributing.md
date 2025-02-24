@@ -33,12 +33,11 @@ Before you start contributing, make sure you have the following:
    ![](./assets/github-fork-01.png)
 
 2. **Clone Your Fork**:
-   - Clone your forked repository to your local machine:
+   - Clone your forked repository to your local machine (replace YOUR-USERNAME with your GitHub username):
      ```bash
      git clone https://github.com/YOUR-USERNAME/rhel-good-practices.git
      cd rhel-good-practices
      ```
-   - Replace `YOUR-USERNAME` with your GitHub username.
 
 3. **Set Upstream Remote**:
    - Add the original repository as an upstream remote to sync changes:
