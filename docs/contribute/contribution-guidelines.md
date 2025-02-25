@@ -1,6 +1,7 @@
 # Contributing guidelines
 
 The static site generation relies on the open source project [mkdocs](https://www.mkdocs.org/).
+mkdocs and the theme we use [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) offer plugins and features to enhance markdown rendering leveraging the [pymdown-extensions](https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/) project.
 
 ## Editing an existing document
 
