@@ -11,8 +11,8 @@ theme:
     text: Red Hat Display
   features:
     - content.code.copy
-    - navigation.expand
     - content.tooltips
+    - navigation.expand
   palette:
     - scheme: default
       primary: custom
@@ -31,6 +31,8 @@ nav:
   - Getting Started:
     - Contributing to the project: contribute/contributing.md
     - Contributing guidelines: contribute/contribution-guidelines.md
+  - Generic:
+    - Placeholder: tbd
   - Security:
     - Welcome to security: security/welcome.md
 markdown_extensions:
@@ -50,4 +52,4 @@ markdown_extensions:
   - abbr
 plugins:
   - macros
-
+  - search
