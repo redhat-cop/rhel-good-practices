@@ -32,7 +32,7 @@ nav:
     - Contributing to the project: contribute/contributing.md
     - Contributing guidelines: contribute/contribution-guidelines.md
   - Generic:
-    - Placeholder: tbd
+    - "Using *.d folders": generic/dotdfolders.md
   - Security:
     - Welcome to security: security/welcome.md
 markdown_extensions:
