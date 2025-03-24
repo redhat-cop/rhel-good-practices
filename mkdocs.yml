@@ -33,7 +33,7 @@ nav:
     - Contributing guidelines: contribute/contribution-guidelines.md
     - Reviewing and testing changes: contribute/review-test-guide.md
   - Generic:
-    - Placeholder: tbd
+    - "Using *.d folders": generic/dotdfolders.md
   - Security:
     - Welcome to security: security/welcome.md
 markdown_extensions:
