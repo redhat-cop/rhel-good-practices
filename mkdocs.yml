@@ -31,6 +31,8 @@ nav:
   - Getting Started:
     - Contributing to the project: contribute/contributing.md
     - Contributing guidelines: contribute/contribution-guidelines.md
+  - System Administration:
+    - Adding new persistent storage: System Administration/Adding storage.md
   - Generic:
     - Placeholder: tbd
   - Security:
