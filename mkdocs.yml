@@ -32,6 +32,8 @@ nav:
     - Contributing to the project: contribute/contributing.md
     - Contributing guidelines: contribute/contribution-guidelines.md
     - Reviewing and testing changes: contribute/review-test-guide.md
+  - System Administration:
+    - Adding new persistent storage: system-administration/adding-storage.md
   - Generic:
     - Placeholder: tbd
   - Security:
