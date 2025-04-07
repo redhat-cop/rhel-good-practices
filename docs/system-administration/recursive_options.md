@@ -1,4 +1,4 @@
-# When use use recursive options in a command
+# When using recursive options in a command
 When you use recursive options for commands, there is always a small risk that you accidentally affect a large scope than you meant. Such as accidentally changing the permissions or ownership of every single file on a system.
 
 An example of a difficult to fix misstake:
