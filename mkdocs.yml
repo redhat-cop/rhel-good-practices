@@ -35,7 +35,7 @@ nav:
   - System Administration:
     - Adding new persistent storage: system-administration/adding-storage.md
   - Generic:
-    - Placeholder: tbd
+    - "Using *.d folders": generic/dotdfolders.md
   - Security:
     - Welcome to security: security/welcome.md
 markdown_extensions:
