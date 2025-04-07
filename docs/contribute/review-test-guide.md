@@ -35,7 +35,7 @@ After the image is built, simply run the container mounting the current folder:
 
 ```bash
 export HOST_PORT=8000
-podman run -it --user $(id -u) --userns=keep-id:uid=$(id -u),gid=$(id -g) -p $HOST_PORT:8000 -v ./:/opt/app-root/src:rw,Z mkdocs-testing mkdocs serve -a 0.0.0.0:8000
+podman run -it --user $(id -u) --userns=keep-id:uid=$(id -u),gid=$(id -g) --network podman -p $HOST_PORT:8000 -v ./:/opt/app-root/src:rw,Z mkdocs-testing mkdocs serve -a 0.0.0.0:8000
 ```
 
 Replace the **HOST_PORT** variable with a free port on the host you are running the container.
