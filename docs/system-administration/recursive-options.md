@@ -1,7 +1,7 @@
 # When using recursive options in a command
-Have you ever typed a command and hit enter before you meant to? That happens to us all, and if the effect of the command is recursive in some way, that can have far reaching effects for your system.
+Have you ever typed a command and hit enter before you meant to? That happens to us all, and if the command runs recursively in some way, that can have far reaching effects for your system.
 
-Classical example of a difficult-to-fix-mistake:
+Classical examples of a difficult-to-fix mistake:
 ```
 chown -R myuser:mygroup /
 rm -rf /home
