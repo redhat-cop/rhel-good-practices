@@ -1,12 +1,11 @@
 # When using recursive options in a command
-When you use recursive options for commands, there is always a small risk that you accidentally affect a larger scope than you meant. Such as accidentally changing the permissions or ownership of every single file on a system.
+Have you ever typed a command and hit enter before you meant to? That happens to us all, and if the effect of the command is recursive in some way, that can have far reaching effects for your system.
 
-An example of a difficult-to-fix-mistake:
+Classical example of a difficult-to-fix-mistake:
 ```
 chown -R myuser:mygroup /
+rm -rf /home
 ````
-
-By adding the recursive option at the end of the command, you reduce the risk of ending up in this situation.
 
 ## Practice
 When using an recursing option for a command, add the recursive options in the end, as such:
@@ -14,8 +13,9 @@ When using an recursing option for a command, add the recursive options in the e
 ```
 # chmod 0700 /the/path/ends/here -R
 # chown myuser:mygroup /the/path/ends/here -R
+# rm /home/myself/garbage -rf
 ```
 
-If you accidentally press enter before the full correct path is typed, you will now not make an erronous change recursively, instead you would only affect one folder or file.
+When entering the recursive option last, that allows you to double check if any paths are correct, before you add the recursive option - and fire off your command.
+If you accidentally press enter before the full correct path is typed, the effect of the command is not recursive - meaning your mistake causes less damage.
 
-Make it a practice that you look through the path or command an extra time before you add the recursive option.
