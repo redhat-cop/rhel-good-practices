@@ -5,7 +5,7 @@ Classical examples of a difficult-to-fix mistake:
 ```
 chown -R myuser:mygroup /
 rm -rf /home
-````
+```
 
 ## Practice
 When using an recursing option for a command, add the recursive options in the end, as such:
