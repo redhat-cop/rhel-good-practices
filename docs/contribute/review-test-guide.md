@@ -7,7 +7,7 @@ Since documentation can contain snippets and markdown from [Material for MkDocs]
   ```dockerfile
     FROM registry.access.redhat.com/ubi9/python-312
     RUN pip3 install mkdocs mkdocs-material mkdocs-macros-plugin
-    ENTRYPOINT mkdocs serve
+    ENTRYPOINT mkdocs serve -a 0.0.0.0:8000
   ```
 </details>
 
@@ -35,7 +35,7 @@ After the image is built, simply run the container mounting the current folder:
 
 ```bash
 export HOST_PORT=8000
-podman run -it --user $(id -u) --userns=keep-id:uid=$(id -u),gid=$(id -g) --network podman -p $HOST_PORT:8000 -v ./:/opt/app-root/src:rw,Z mkdocs-testing mkdocs serve -a 0.0.0.0:8000
+podman run -it --user $(id -u) --network podman -p $HOST_PORT:8000 -v ./:/opt/app-root/src:rw,Z mkdocs-testing mkdocs serve -a 0.0.0.0:8000
 ```
 
 Replace the **HOST_PORT** variable with a free port on the host you are running the container.
