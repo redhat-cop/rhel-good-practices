@@ -3,7 +3,6 @@
 Have you ever had to create custom java trust store or been greeted by an error message like `x509: certificate signed by unknown authority`? 
 Then this is section is for you.
 
-
 ## Background
 
 Many times enterprises may choose to have an internal PKI and Certificate Authority not trusted by anyone outside the organization.
