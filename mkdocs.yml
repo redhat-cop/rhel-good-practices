@@ -39,6 +39,7 @@ nav:
     - "Using *.d folders": generic/dotdfolders.md
   - Security:
     - Welcome to security: security/welcome.md
+    - Certificate management: security/certificate-management.md
 markdown_extensions:
   - admonition
   - pymdownx.details
