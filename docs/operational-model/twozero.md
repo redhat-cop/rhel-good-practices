@@ -30,6 +30,7 @@ Processes related to the Red Hat Enterprise Linux standard platform itself.
 * **Automatic onboarding** - n order to speed up the onboarding process, it is key that you automate as much as possible. This will also decrease the risk that something is not properly configured, such as RBAC configuration in AAP. It's important that people do not have to wait too long, as that risks create shadow IT, where people simply install Linux themselves.
 
 An overview of a common onboarding process can be viewed below. Please note that the graphics describes all three advancement levels of onboarding.
+
 ![Overview](assets/rhel-onboarding.jpg)
 
 The steps for the 2.0 version of the onboarding process follows:

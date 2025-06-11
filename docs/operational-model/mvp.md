@@ -23,6 +23,7 @@ Processes related to the Red Hat Enterprise Linux standard platform itself.
 * **Manual onboarding** - The onboarding process is commonly not automated. When new people or teams get onboarded, the people who works with the platform are responsible for this process. This process is very simple in its nature, lacking assessment of who and what is onboarded and training. Because of this - what people end up doing with their systems, and how they will manage them, is very different. If you need to onboard more than a few teams, you should have more advanced.
 
 An overview of a common onboarding process can be viewed below. Please note that the graphics describes all three advancement levels of onboarding.
+
 ![Overview](assets/rhel-onboarding.jpg)
 
 The steps for the MVP version of the onboarding process follows:
