@@ -1,5 +1,5 @@
 # Operational Model - RHEL - Advanced
-If you are wonder what an operational model is, [you should start by reading this introduction](https://redhat-cop.github.io/rhel-good-practices/operational-model/intro/).
+If you are wonder what an operational model is, [you should start by reading this introduction](/operational-model/intro/).
 
 # Overview
 Zoom into this picture for details.
