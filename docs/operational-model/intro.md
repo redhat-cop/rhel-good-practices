@@ -23,6 +23,7 @@ The MVP version of a platform definition is a common good practice starting poin
 Once there has been some real degree of success and adoption of the platform, it’s time to fine tune the definition for it to be able to meet the requirements of the future. Focus is on more advanced platform and adoption related capabilities. We spend more time standardizing things such as how we develop, install and configuration the platform, an investment which is required as the burden of compliance otherwise threatens to grind our organization to a halt. The features we now build reduces the effort regarding maintenance and compliance, and allows us to maintain a much larger install base of Linux installation.
 
 [Read more here.](https://redhat-cop.github.io/rhel-good-practices/operational-model/twozero/)
+
 3. Advanced
 
 A lot of focus now goes into making sure the platform install base can grow to significant scales and make more signficant business impact. Our platform is one of the key technologies used in our organization and needs to be able to cater for much stricter requirements. At the same time we need to spend increased effort on the community we have built around our Linux platform. Some final technical capabilities are put in place to ensure we can meet any type of business requirements.

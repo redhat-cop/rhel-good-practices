@@ -27,6 +27,7 @@ Processes related to the Red Hat Enterprise Linux standard platform itself.
 
 ## Onboarding process
 An overview of a common onboarding process can be viewed below. Please note that the graphics describes all three advancement levels of onboarding.
+
 ![Overview](assets/rhel-onboarding.jpg)
 
 The steps for the Advanced version of the onboarding follows:
