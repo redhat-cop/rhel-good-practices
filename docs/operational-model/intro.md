@@ -8,6 +8,10 @@ The model, which covers people, process, technology, service management and stra
 
 It’s likely that your best fit is a mix of the different levels (MVP, 2.0, Advanced).
 
+An overview of the complete operational model, with all sub-sections can be viewed below. Zoom into the picture for details:
+
+![Overview](assets/rhel-operational-model.jpg)
+
 1. Minimal Viable Product (MVP)
 
 The MVP version of a platform definition is a common good practice starting point, which we can build on. Due to the limitation in regards to automation, this works for a limited install base of servers. We are weighing things such as ease-of-adoption and standardization against effort to implement. Instead of creating a so-called “big bang release”, which requires significant investments in regards to effort and people, we ensure we have just enough platform features to provide our platform for some first real life use-cases.

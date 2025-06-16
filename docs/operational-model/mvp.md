@@ -1,13 +1,17 @@
 # Operational Model - RHEL - Minimal Viable Product
 If you are wonder what an operational model is, [you should start by reading this introduction](https://redhat-cop.github.io/rhel-good-practices/operational-model/intro/).
 
-# Overview
-Zoom into this picture for details.
-
-![Overview](assets/rhel-operational-model.jpg)
-
 # People
+Overview of the people section. Zoom into this picture for details.
+
+![Overview](assets/rhel-operational-model-people.jpg)
+
 * It is common that the people who operate and maintain the platform has other jobs and do not work dedicated on the platform. Or it could simply just be a group of people with system admin type jobs. Even though we do not yet require a dedicated platform owner or platform engineering team, we should already start thinking about that.
+
+# Process
+Overview of the process section. Zoom into this picture for details.
+
+![Overview](assets/rhel-operational-model-process.jpg)
 
 ## RHEL Platform processes
 Processes related to the Red Hat Enterprise Linux standard platform itself.
@@ -34,6 +38,11 @@ The steps for the MVP version of the onboarding process follows:
 
 ## Development processes
 * There are no standardized processes yet, related to how we are developing our RHEL platform. That also puts some limitations for how much we can scale at this point, as that would risk racking up a lot of technical debt. As an example, if we have to perform a lot of changes to our RHEL standard, that will take a lot of time and effort, while it's likely that those changes will not be applied consistently across our installed base.
+
+# Technology
+Overview of the technology section. Zoom into this picture for details.
+
+![Overview](assets/rhel-operational-model-process.jpg)
 
 ## RHEL architecture
 Architectural decisions related to Red Hat Enterprise Linux.
@@ -72,6 +81,10 @@ Technology implementations related to onboarding.
 * **Link collection** - A good way to help people who get onboarded is by maintaining a list of useful links.
 
 # Platform management 
+Overview of the platform management section. Zoom into this picture for details.
+
+![Overview](assets/rhel-operational-model-platform-management.jpg)
+
 Administrative features which helps with the development or maintenence of the platform.
 
 * **Service Level Agreement** - Select what different SLAs your platform should support.

@@ -1,12 +1,11 @@
 # Operational Model - RHEL - Minimal Viable Product
 If you are wonder what an operational model is, [you should start by reading this introduction](https://redhat-cop.github.io/rhel-good-practices/operational-model/intro/).
 
-# Overview
-Zoom into this picture for details.
-
-![Overview](assets/rhel-operational-model.jpg)
-
 # People
+Overview of the people section. Zoom into this picture for details.
+
+![Overview](assets/rhel-operational-model-people.jpg)
+
 * It is common that the people who operate and maintain the platform has other jobs and do not work dedicated on the platform. Even though we do not yet require a dedicated platform owner or platform engineering team, we should already start thinking about that.
 
 ## Community of practice
@@ -16,6 +15,11 @@ There are many different names for this, for example Centre of Excellence, DevOp
 * **Community of practice members** - The community consists of people who are interested in automation and your platform. You gotta catch em all to get get a strong and growing community, but it's good to start small, as there is a lot to learn here.
 * **Chat channel** - Community of pratice members needs a place where they can talk to each other.
 * **Re-ocurring meeting** - Schedule a meeting every other week or weekly, where people can share and interact with each other.
+
+# Process
+Overview of the process section. Zoom into this picture for details.
+
+![Overview](assets/rhel-operational-model-process.jpg)
 
 ## RHEL Platform processes
 Processes related to the Red Hat Enterprise Linux standard platform itself.
@@ -50,6 +54,11 @@ Processes related to the development of your RHEL platform.
 * **Testing** - When you have developed a new feature in your RHEL standard, how do you test it? Initially this may be a semi-manual process, where you do an installation and see if it was successful. As you move forward, this will have to be automated.
 * **CI/CD** - In order to automate your development processes, you need CI/CD. But how do you work with CI/CD? That is what this process describes.
 * **RHEL best practices** - It's common that you have a standard for how to write a programming language, based on best practices. In the same way, there are best practices for how to do things in Red Hat Enterprise Linux. Sit down and consider what design principles and best practices are and then document it. This will help people who contributes to your standard as well.
+
+# Technology
+Overview of the technology section. Zoom into this picture for details.
+
+![Overview](assets/rhel-operational-model-technology.jpg)
 
 ## RHEL architecture
 Architectural decisions related to Red Hat Enterprise Linux.
@@ -89,7 +98,11 @@ Technology implementations related to onboarding.
 * **Platform documentation** - A common part of a technical platform implementation, you have documentation which decribes to other people how the platform works.
 * **Link collection** - A good way to help people who get onboarded is by maintaining a list of useful links.
 
-# Platform management 
+# Platform management
+Overview of the platform management section. Zoom into this picture for details.
+
+![Overview](assets/rhel-operational-model-platform-management.jpg)
+ 
 Administrative features which helps with the development or maintenence of the platform.
 
 * **RHEL Success Plan** - There is a basic success plan in place for the platform, outlining what KPIs we want to impact. We are often lacking performance monitoring for these KPIs.

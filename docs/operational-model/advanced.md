@@ -7,6 +7,10 @@ Zoom into this picture for details.
 ![Overview](assets/rhel-operational-model.jpg)
 
 # People
+Overview of the process section. Zoom into this picture for details.
+
+![Overview](assets/rhel-operational-model-people.jpg)
+
 * **Solution architects** - To offload the many discussions on how to do different things with your operating system platform, it makes a lot of sense to have one or several Solution Architects which focuses on helping users implement their systems.  
 
 ## Community of practice
@@ -38,6 +42,11 @@ Processes related to the development of your RHEL platform.
 * **Automated RPM builds** - You have an automated RPM build system which ties into the automatic and continous deployment and testing of your platform.
 * **Advanced supply chain security** - The development process of your standard has advanced security compliance such as [SLSA Level 3](https://slsa.dev/).
 * **Ansible, Terraform, etc** - To deploy a complete fresh instance of your RHEL platform in an automated fashion you do well in using an automation framework, such as Ansible or Terraform.
+
+# Technology
+Overview of the technology section. Zoom into this picture for details.
+
+![Overview](assets/rhel-operational-model-technology.jpg)
 
 ## RHEL architecture
 Architectural decisions related to Red Hat Enterprise Linux.
