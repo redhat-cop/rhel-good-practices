@@ -31,6 +31,7 @@ An overview of a common onboarding process can be viewed below. Please note that
 ![Overview](assets/rhel-onboarding.jpg)
 
 The steps for the MVP version of the onboarding process follows:
+
 * **Users provided access to landing page** - The landing page is referenced and described in the overall operational model. It is a page where users can go and get information such as platform documentation, descriptions of process (such as the onboarding process itself) and documentation and training materials/links.
 * **LDAP groups created** - If your organization is using an LDAP solution for identity, create some standard LDAP groups which you can connect to the your RHEL installations. It's good if you create some type of standard naming here, such as: rhel-(system-name)-(team name)-admin, rhel-(system-name)-(team name)-user, etc. The team in question can then own these groups and do user management themselves.
 * **Users added to group** - Users are added to the groups in question. This may be done by the team who are being onboarded.
