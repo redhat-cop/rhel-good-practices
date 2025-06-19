@@ -1,5 +1,5 @@
 # Operational Model - RHEL - Minimal Viable Product
-If you are wonder what an operational model is, [you should start by reading this introduction](/operational-model/intro/).
+If you are wonder what an operational model is, [you should start by reading this introduction](intro.md).
 
 # People
 Overview of the people section. Zoom into this picture for details.
