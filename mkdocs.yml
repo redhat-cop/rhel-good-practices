@@ -40,6 +40,11 @@ nav:
   - Security:
     - Welcome to security: security/welcome.md
     - Certificate management: security/certificate-management.md
+  - Operational Model:
+    - "What is an operational model": operational-model/intro.md
+    - "Minimal Viable Product": operational-model/mvp.md
+    - "2.0": operational-model/twozero.md
+    - "Advanced": operational-model/advanced.md
 markdown_extensions:
   - admonition
   - pymdownx.details
