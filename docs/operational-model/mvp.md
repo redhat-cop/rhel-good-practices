@@ -42,7 +42,7 @@ The steps for the MVP version of the onboarding process follows:
 # Technology
 Overview of the technology section. Zoom into this picture for details.
 
-![Overview](assets/rhel-operational-model-process.jpg)
+![Overview](assets/rhel-operational-model-technology.jpg)
 
 ## RHEL architecture
 Architectural decisions related to Red Hat Enterprise Linux.
