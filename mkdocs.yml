@@ -38,7 +38,6 @@ nav:
   - Generic:
     - "Using *.d folders": generic/dotdfolders.md
   - Security:
-    - Welcome to security: security/welcome.md
     - Certificate management: security/certificate-management.md
   - Operational Model:
     - "What is an operational model": operational-model/intro.md
