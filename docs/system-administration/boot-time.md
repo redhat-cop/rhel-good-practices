@@ -1,6 +1,6 @@
 # Troubleshooting long boot time 
 Here is a tip for when you have a (RHEL 8 or later) system which takes a surprising amount of time to boot.
-Boot time of a system can be a good general indicator that something may be wrong with the system, and may be something which you want to monitor in general of for specific services.
+Boot time for a system can be a good general indicator that something may be wrong with the system, and may be something which you want to monitor in general of for specific services.
 
 ## Practice
 Use systemd-analyze to get detailed timing information from the last boot.
