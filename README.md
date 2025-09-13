@@ -9,3 +9,4 @@ This page gathers various good practices, but it does not:
 * Replace Red Hat's official documentation.
 * Replace Red Hat support
 * Provide a definite answer for something. We deal with good practices, meaning there may be multiple ways to do something.
+ 
