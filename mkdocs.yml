@@ -34,9 +34,10 @@ nav:
     - Reviewing and testing changes: contribute/review-test-guide.md
   - System Administration:
     - Adding new persistent storage: system-administration/adding-storage.md
-    - When using recursive options: system-administration/recursive-options.md
     - Troubleshooting boot time: system-administration/boot-time.md
     - Creating helper scripts: system-administration/helper-scripts.md
+    - Rebooting a system: system-administration/rebooting_practices.md
+    - When using recursive options: system-administration/recursive-options.md
   - Generic:
     - "Using *.d folders": generic/dotdfolders.md
   - Security:
