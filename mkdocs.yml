@@ -41,6 +41,7 @@ nav:
     - "Using *.d folders": generic/dotdfolders.md
   - Security:
     - Certificate management: security/certificate-management.md
+    - SELinux management: security/selinux.md
   - Operational Model:
     - "What is an operational model": operational-model/intro.md
     - "Minimal Viable Product": operational-model/mvp.md
