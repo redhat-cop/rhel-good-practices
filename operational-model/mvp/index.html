@@ -1,0 +1,1041 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Web Page for the Red Hat Enterprise Linux Good Practices repository">
+      
+      
+        <meta name="author" content="Alessandro Rossi (alerossi@redhat.com) - Magnus Glantz (mglantz@redhat.com) - Rick Greene (rgreene@redhat.com) - Sam Wachira (swachira@redhat.com)">
+      
+      
+      
+        <link rel="prev" href="../intro/">
+      
+      
+        <link rel="next" href="../twozero/">
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Minimal Viable Product - Red Hat Enterprise Linux Good Practices</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Hat+Display:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Red Hat Display";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#operational-model-rhel-minimal-viable-product" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Red Hat Enterprise Linux Good Practices" class="md-header__button md-logo" aria-label="Red Hat Enterprise Linux Good Practices" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Red Hat Enterprise Linux Good Practices
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Minimal Viable Product
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/redhat-cop/rhel-good-practices/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Red Hat Enterprise Linux Good Practices" class="md-nav__button md-logo" aria-label="Red Hat Enterprise Linux Good Practices" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Red Hat Enterprise Linux Good Practices
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/redhat-cop/rhel-good-practices/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing to the project
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/contribution-guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/review-test-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reviewing and testing changes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    System Administration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            System Administration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-administration/adding-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding new persistent storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-administration/boot-time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting boot time
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-administration/helper-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creating helper scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-administration/rebooting_practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rebooting a system
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-administration/recursive-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When using recursive options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Generic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Generic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generic/dotdfolders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using *.d folders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/certificate-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Certificate management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/selinux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SELinux management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operational Model
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Operational Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is an operational model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Minimal Viable Product
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../twozero/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="operational-model-rhel-minimal-viable-product">Operational Model - RHEL - Minimal Viable Product</h1>
+<p>If you are wonder what an operational model is, <a href="../intro/">you should start by reading this introduction</a>.</p>
+<h1 id="people">People</h1>
+<p>Overview of the people section. Zoom into this picture for details.</p>
+<p><img alt="Overview" src="../assets/rhel-operational-model-people.jpg" /></p>
+<ul>
+<li>It is common that the people who operate and maintain the platform has other jobs and do not work dedicated on the platform. Or it could simply just be a group of people with system admin type jobs. Even though we do not yet require a dedicated platform owner or platform engineering team, we should already start thinking about that.</li>
+</ul>
+<h1 id="process">Process</h1>
+<p>Overview of the process section. Zoom into this picture for details.</p>
+<p><img alt="Overview" src="../assets/rhel-operational-model-process.jpg" /></p>
+<h2 id="rhel-platform-processes">RHEL Platform processes</h2>
+<p>Processes related to the Red Hat Enterprise Linux standard platform itself.</p>
+<ul>
+<li><strong>Incident management</strong> - We need a standard process for managing technical incidents for the platform. Who should people contact if something goes wrong with their Linux server? And what will we do if something breaks?</li>
+<li><strong>Life Cycle Management</strong> - It is important that we communicate when we plan to update our platform. This in a form of a life-cycle management plan. At this point, if you do not know much about this, you can copy the Red Hat Enterprise Linux life-cycle management plan, which you find here: <a href="https://access.redhat.com/support/policy/updates/errata">Red Hat Enterprise Linux Life Cycle</a></li>
+<li><strong>Backup and recovery</strong> - We need to have a standard process for doing backups and recovering from those backups. Life cycle management and incident management depends on this.</li>
+<li><strong>Patch Management</strong> - We need a process for how to patch our RHEL installations. This can include moving between minor releases of RHEL, but not major releases as that is a special workflow. In part this process needs to cover how you identify systems which needs to be patched and then how the system is patched. Initially, this will be a manual process, later on, this becomes an automated process.</li>
+<li><strong>Capacity management</strong> - How do we monitor the utilization of an installed RHEL server, and act as we need to expand the capacity? Put in place a process to deal with this. It's normal that the process at this point is manual.</li>
+<li><strong>Subscription management</strong> - How do you keep track of your Red Hat Enterprise Linux subscription usage? If your systems can conntact to Red Hat's services, then you will be able to manage your subscriptions via <a href="https://access.redhat.com/management">Red Hat's online Subscription Management page</a>. You should create a process for keeping track of utilization, so that you can order more subscriptions, before you actually run out. You can reach out to your Red Hat account team to get help with designing such a process.</li>
+</ul>
+<h2 id="onboarding-process">Onboarding process</h2>
+<ul>
+<li><strong>Manual onboarding</strong> - The onboarding process is commonly not automated. When new people or teams get onboarded, the people who works with the platform are responsible for this process. This process is very simple in its nature, lacking assessment of who and what is onboarded and training. Because of this - what people end up doing with their systems, and how they will manage them, is very different. If you need to onboard more than a few teams, you should have more advanced.</li>
+</ul>
+<p>An overview of a common onboarding process can be viewed below. Please note that the graphics describes all three advancement levels of onboarding.</p>
+<p><img alt="Overview" src="../assets/rhel-onboarding.jpg" /></p>
+<p>The steps for the MVP version of the onboarding process follows:</p>
+<ul>
+<li><strong>Users provided access to landing page</strong> - The landing page is referenced and described in the overall operational model. It is a page where users can go and get information such as platform documentation, descriptions of process (such as the onboarding process itself) and documentation and training materials/links.</li>
+<li><strong>LDAP groups created</strong> - If your organization is using an LDAP solution for identity, create some standard LDAP groups which you can connect to the your RHEL installations. It's good if you create some type of standard naming here, such as: rhel-(system-name)-(team name)-admin, rhel-(system-name)-(team name)-user, etc. The team in question can then own these groups and do user management themselves.</li>
+<li><strong>Users added to group</strong> - Users are added to the groups in question. This may be done by the team who are being onboarded.</li>
+<li><strong>RBAC configuration created on servers</strong> - You now put in place the required RBAC related configuration on your server, as it relates to things such as sudoers, ssh, pam, sssd, etc. </li>
+</ul>
+<h2 id="development-processes">Development processes</h2>
+<ul>
+<li>There are no standardized processes yet, related to how we are developing our RHEL platform. That also puts some limitations for how much we can scale at this point, as that would risk racking up a lot of technical debt. As an example, if we have to perform a lot of changes to our RHEL standard, that will take a lot of time and effort, while it's likely that those changes will not be applied consistently across our installed base.</li>
+</ul>
+<h1 id="technology">Technology</h1>
+<p>Overview of the technology section. Zoom into this picture for details.</p>
+<p><img alt="Overview" src="../assets/rhel-operational-model-technology.jpg" /></p>
+<h2 id="rhel-architecture">RHEL architecture</h2>
+<p>Architectural decisions related to Red Hat Enterprise Linux.</p>
+<h3 id="infrastructure-design">Infrastructure design</h3>
+<p>Infrastructure related decisions.</p>
+<ul>
+<li><strong>Availability</strong> - We need to design our platform so that it can meet our requirements for availability. That may mean that we need to support to run on a specific server or virtualization platform, or support specific storage configurations related to SAN.</li>
+<li><strong>Security</strong> - We need to design our platform so that it also meets requirements for security, that includes hardening practices for RHEL, supporting network segmentation, 3rd party security tools, etc.</li>
+<li><strong>Monitoring</strong> - To ensure availability and security, some type of monitoring needs to be put in place. How do you know if utilization of CPU, memory or storage goes through the roof? How do you know that your backup client or security related services are running? Monitoring.</li>
+<li><strong>Repository management</strong> - If your systems can connect to Red Hat's YUM repositories, then this item is resolved. Please note that when you do update your systems, they will be updated to whatever latest versions are available. If you want control over what version of software gets installed on your RHEL servers, or if your systems cannot be connected to Red Hat provided YUM repositories, then you need to decide how you will manage the RHEL yum repositories yourself. Via some 3rd party system or by simply synchronizing related repositories to some local NFS or HTTP server?</li>
+<li><strong>Subscription management</strong> - If your systems can conntact to Red Hat's services, then you will be able to manage your subscriptions via <a href="https://access.redhat.com/management">Red Hat's online Subscription Management page</a>. If this is not the case, you should invent some custom temporary mean to count how many subscriptions are currently used, perhaps by development a document for this purpose.</li>
+</ul>
+<h3 id="rhel-design">RHEL design</h3>
+<p>Design of your Red Hat Enterprise Linux standard.</p>
+<ul>
+<li><strong>Package baseline</strong> - You have to decide what packages should be a part of your RHEL standard installation. Red Hat has some standard RHEL package definitions such as core, base, which can inspire you. Also, if you have a look at a standard RHEL KVM or Cloud images, that can also be used for inspiration.</li>
+<li><strong>User and identity management</strong> - How will you do users management in your RHEL standard? Will you allow the use of local users? Will you require the use of some LDAP service for identity and authentication? Will you mandate the use of service accounts for automation? You better decide these things now, before you have hundreds of servers.</li>
+<li><strong>RBAC</strong> - This relates to configuring who gets access to do what. Will everyone have root access? Or will only some people have this? This is where you decide on any separation of duty enforcements and configure related services such as sssd, sshd, sudoers, pam, etc.</li>
+<li><strong>Installation</strong> - Decide on how to install Red Hat Enterprise Linux. Starting off with your RHEL Linux standard platform, it is not unusual that people manually installs RHEL. With that said, nowdays it's also common that you start off with some automated installation, using standard RHEL images you download and built in virtualization or cloud features such as cloud init.</li>
+<li><strong>Manual patch management</strong> - In the beginning of your RHEL journey, it's not uncommon that patch management is a manual process. You still need to decide on how to do patching though. This includes the process of making patches available to your systems, ensuring backups are in place, installing updates, testing so that nothing broke, etc. If this process is not automated it soon becomes very painful to scale the numbers of your installed based of RHEL. So prioritize automating this later on.</li>
+</ul>
+<h2 id="development-tool-chain">Development tool chain</h2>
+<p>Features related to the development tool chain.</p>
+<ul>
+<li><strong>Git organization</strong> - How do you organize things such as related automation, in your version control system? Do you gather all repositories in the same group, or something else?</li>
+<li><strong>Git repository structure</strong> - If you end up maintaining a lot of different respositories, it may be a good idea to decide how these repositories should work. Will you commit everything straight to the main branch, or will you have <a href="https://www.gitkraken.com/learn/git/best-practices/git-branch-strategy">a more refined git branching strategy</a>?</li>
+</ul>
+<h2 id="onboarding">Onboarding</h2>
+<p>Technology implementations related to onboarding.</p>
+<ul>
+<li><strong>Landing page</strong> - When someone gets onboarded to your platform. They need a place to start their onboarding process. This is typically a wiki page or webpage maintained by the core platform team.</li>
+<li><strong>Platform documentation</strong> - A common part of a technical platform implementation, you have documentation which decribes to other people how the platform works.</li>
+<li><strong>Link collection</strong> - A good way to help people who get onboarded is by maintaining a list of useful links.</li>
+</ul>
+<h1 id="platform-management">Platform management</h1>
+<p>Overview of the platform management section. Zoom into this picture for details.</p>
+<p><img alt="Overview" src="../assets/rhel-operational-model-platform-management.jpg" /></p>
+<p>Administrative features which helps with the development or maintenence of the platform.</p>
+<ul>
+<li><strong>Service Level Agreement</strong> - Select what different SLAs your platform should support.</li>
+<li><strong>Operational Level Agreement</strong> - Select what different OLAs your platform should support (if you use OLAs).</li>
+<li><strong>Feature planning</strong> - Make sure that as you plan and prioritize the different capabilities of your platform. A good start is to benchmark yourself against the model and then prioritize the different features across the MVP, 2.0 and Advanced levels. Except for creating more structure for the platform building process - this allows you to communicate detailed information about future feature, to the users of the platform.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.expand"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
