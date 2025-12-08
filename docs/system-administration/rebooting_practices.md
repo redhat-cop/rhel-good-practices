@@ -52,3 +52,13 @@ Check the scheduling of jobs and schedule the reboot accordingly.
      ```bash
      crontab -l
      ```
+
+**5. Checking Filesystems**
+
+Rebooting with a full /var filesystem has historically caused problems with servers coming back up.
+Check your filesystem space and act accordingly
+
+- List currently scheduled jobs. 
+     ```bash
+     df -h
+     ```
