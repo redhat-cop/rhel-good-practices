@@ -34,6 +34,8 @@ So let's review the two options.
 The most simple but also most limited way to get started is to install Claude CLI on a Red Hat Enterprise Linux server.
 You can then without further configuration prompt Claude to execute commands and extract information from Red Hat Enterprise Linux with the user you are logged in as.
 
+![alt text](claude-cli-local.png)
+
 ## MCP integration
 The best practice way to have Cluade (or any 3rd party AI tool) to integrate to Red Hat Enterprise Linux is to use the MCP server which Red Hat Enterprise Linux is shipped with.
 For more information about [how to setup RHEL and MCP, see this blog](https://www.redhat.com/en/blog/smarter-troubleshooting-new-mcp-server-red-hat-enterprise-linux-now-developer-preview).
