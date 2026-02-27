@@ -39,22 +39,22 @@ Updating the MCP server, directly impacts the agents ability to talk to and inte
 ## Red Hat Enterprise Linux design considerations
 When agents talks to your system, there are a number of RHEL subsystems which are of interest to you, as they can in different ways confine what agents can and cannot do on your systems. Crafting policy which limits your agents is a good practice, as if you do not have humans in the loop for what agents do, you need policy to restrict what information can be consumed and what actions are possible to do on  system. Allowing unrestricted root access on a system is not something you should do outside of a restricted local lab environment.
 
+A good starting point for your design is to read the [RHEL Security hardening guide](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/security_hardening/index), in full.
+
 ### User management
 Overall, a good practice is to apply the same user management processes as you do with any other type of system integration. Use service accounts which are subject to RBAC.
 
 ## sudo
-
-
-## Run0
+You can use sudo to manage what commands a user is allowed to run. [Read more about that for RHEL here.](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/security_hardening/managing-sudo-access)
 
 ## SELinux
+A very powerful way to restrict users and process is using SELinux, a mandatory access system which has the Linux kernel limit what is possible to do in a system. [Read more about SELinux in RHEL here](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/using_selinux/index)
 
 ## FApolicyd
-
-## IMA
+You can use FApolicyd in Red Hat Enterprise Linux to create a white or blacklist for what can be run in your system. [Read more about FApolicyd in RHEL here](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/security_hardening/blocking-and-allowing-applications-by-using-fapolicyd)
 
 ## CGroups
-
-## Terminal session logging
+You can use CGroups in Red Hat Enterprise Linux to limit resource utilization in your system. A good reading starting point is "A Linux sysadmin's introduction to CGroups"](https://www.redhat.com/en/blog/cgroups-part-one)
 
 ## Auditd
+To get a detailed audit trail of what information your agents are accessing and what commands they run, you can enable auditd to generate a detailed audit trail. [Read more about Auditd in RHEL here](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/risk_reduction_and_recovery_operations/auditing-the-system)
