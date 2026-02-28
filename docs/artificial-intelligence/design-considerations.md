@@ -18,9 +18,10 @@ If you have an agent installed on your local system, it's no uncommon that it ta
 
 ### Access
 
-When for example using RHEL Lightspeed, aka the command line assistant, aka "c", or a local installation of Claude CLI, you have an agent running on your RHEL instance. In our examples of RHEL Lightspeed or Claude CLI, the agent runs with the priviledges of that user. That means that any commands that your user can run, are potential commands which your agent can use. In the case of RHEL Lightspeed, the agent is limited to what it is allowed to do, but this is not always the case, across other AI agents and should be considered carefully.
+When for example using RHEL Command Line Assistant (CLA), aka "c", or a local installation of similar CLI tools that implement AI, you have an agent running on your RHEL instance.
+In our examples of RHEL Lightspeed, the agent runs with the priviledges of that user. That means that any commands that your user can run, are potential commands which your agent can use. In the case of RHEL CLA, the agent is limited to what it is allowed to do, but this is not always the case, across other AI agents and should be considered carefully.
 
-If the agent would having suid bit or similiar privieledge, it may run with more priviledges than the user. This would in general terms be very risky and advised against.
+If the agent has suid bit or similiar privieledge, it may run with more priviledges than the user. This would in general terms be very risky and advised against.
 
 ### Audit trail
 
@@ -28,7 +29,7 @@ When commands are run in a local terminal session, audit trails are commonly mor
 
 ### Life Cycle management
 
-If your agent have direct integration to the underlying operating system, you need to consider the stability of the underlying interfaces it's using. In the case of RHEL Lightspeed, it's developed with Red Hat Enterprise Linux in mind, and is tested specifically against Red Hat Enterprise Linux. At the same time, the Red Hat Enterprise Linux ABI provides increased stability across minor and even major releases. If you are using a third party agent, you would need to ensure yourself that it can properly talk to the underlying Linux subsystems in the case of updates of either agent or operating system.
+If your agent have direct integration to the underlying operating system, you need to consider the stability of the underlying interfaces it's using. In the case of RHEL CLA, it's developed with Red Hat Enterprise Linux in mind, and is tested specifically against Red Hat Enterprise Linux. At the same time, the Red Hat Enterprise Linux ABI provides increased stability across minor and even major releases. If you are using a third party agent, you would need to ensure yourself that it can properly talk to the underlying Linux subsystems in the case of updates of either agent or operating system.
 
 ## **MCP integration**
 
