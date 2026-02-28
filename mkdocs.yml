@@ -51,7 +51,6 @@ nav:
   - Artificial Intelligence:
     - "Design considerations": artificial-intelligence/design-considerations.md
     - "RHEL Lightspeed": artificial-intelligence/rhel-lightspeed.md
-    - "Claude CLI": artificial-intelligence/claude-cli.md
 markdown_extensions:
   - admonition
   - pymdownx.details
