@@ -8,7 +8,7 @@ As this space is under agressive development, we expect this page to be continou
 When running AI agents against Red Hat Enterprise Linux (RHEL) systems, there are in general two different ways that you can do that.
 
 1. Direct integration: Having the agent run on a local RHEL system, and integrate to the Linux subsystem through directly.
-2. MCP integration: Having the agent talk to RHEL instances through a MCP services.
+2. MCP integration: Having the agent talk to RHEL instances through MCP services.
 
 Let's unpack the two options.
 
@@ -19,9 +19,9 @@ If you have an agent installed on your local system, it's no uncommon that it ta
 ### Access
 
 When for example using RHEL Command Line Assistant (CLA), aka "c", or a local installation of similar CLI tools that implement AI, you have an agent running on your RHEL instance.
-In our examples of RHEL Lightspeed, the agent runs with the priviledges of that user. That means that any commands that your user can run, are potential commands which your agent can use. In the case of RHEL CLA, the agent is limited to what it is allowed to do, but this is not always the case, across other AI agents and should be considered carefully.
+In our examples of RHEL Lightspeed, the agent runs with the privileges of that user. That means that any commands that your user can run, are potential commands which your agent can use. In the case of RHEL CLA, the agent is limited to what it is allowed to do, but this is not always the case, across other AI agents and should be considered carefully.
 
-If the agent has suid bit or similiar privieledge, it may run with more priviledges than the user. This would in general terms be very risky and advised against.
+If the agent has suid bit or similiar privieledge, it may run with more privileges than the user. This would in general terms be very risky and advised against.
 
 ### Audit trail
 
