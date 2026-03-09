@@ -48,6 +48,9 @@ nav:
     - "Minimal Viable Product": operational-model/mvp.md
     - "2.0": operational-model/twozero.md
     - "Advanced": operational-model/advanced.md
+  - Artificial Intelligence:
+    - "Design considerations": artificial-intelligence/design-considerations.md
+    - "RHEL Lightspeed": artificial-intelligence/rhel-lightspeed.md
 markdown_extensions:
   - admonition
   - pymdownx.details
