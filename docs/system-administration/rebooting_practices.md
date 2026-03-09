@@ -60,5 +60,13 @@ Check your filesystem space and act accordingly.
 
 - Check filesystem usage
      ```bash
+     df -h /var
+     ```
+- Depending on your environment, there could be additional filesytems that could hinder reboot. To check the rest of the filesytems.
+     ```bash
      df -h
      ```
+- If the list from the standard `df -h` is unmanagable to look through due to extra `tmpfs, overlay, shm, snap filesystems`. The can be excluded with the below
+    ```bash
+    df -h -x <filesystem type> [-x <filesystem type> ...]
+    ```
