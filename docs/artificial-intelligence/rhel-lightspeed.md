@@ -1,6 +1,6 @@
 # Command Line Assistant - RHEL Lightspeed
 
-Command Line Assistant (CLA) is part of RHEL Lightspeed (link) and it is an AI Assistant, augmented with Red Hat Documentation, KB Articles, best practices, available for installation since RHEL 9.6 and RHEL 10.0.
+Command Line Assistant (CLA) is part of RHEL Lightspeed (link) and it is an AI Assistant, augmented with Red Hat Documentation, KB Articles, best practices. It is available for installation since RHEL 9.6 and RHEL 10.0.
 
 This article wants to highlight some best practices and suggestions to make an effective and safe use of this technology.
 
@@ -12,10 +12,10 @@ It can be a good partner to:
 
 - Troubleshoot issues and analyze logs
 - Generate scripts to automate or simplify complex and repetitive tasks
-- Guide to hardened systems, analyzing the current configurations and settings
+- Help guide hardening systems, analyzing the current configurations and settings
 - Be a strong support when learning or experimenting with new tools or features.
 
-In the next sections, we will provide some suggestions on how to use CLA in an efficient and secure way.
+In the next sections, we will provide some suggestions on how to use CLA efficiently and securely.
 
 ## Providing context to Command Line Assistant - RHEL Lightspeed
 
@@ -63,6 +63,6 @@ Any configuration or command should be tested in a scenario disconnected from pr
 
 ### Do not share sensitive information
 
-While Red Hat doesn't use your data to train or augment the model, history might be saved locally, and in connected scenario (the default for Command Line Assistant - RHEL Lightspeed) data needs to transit from the client to the model serving backend.
-Although there is a secure connection in place, the suggestion is to always avoid sharing sensitive information with Command Line Assistant - RHEL Lightspeed.
+While Red Hat doesn't use your data to train or augment the "model", history might be saved locally, and in the connected scenario (the default for Command Line Assistant - RHEL Lightspeed), data needs to transit from the client to the server running the model in the backend.
+Although a secure connection is in place, it is recommended that you never share sensitive information with Command Line Assistant - RHEL Lightspeed.
 
