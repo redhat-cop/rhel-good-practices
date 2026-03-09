@@ -57,3 +57,21 @@ Check the scheduling of jobs and schedule the reboot accordingly.
      ```bash
      crontab -l
      ```
+
+**5. Checking Filesystems**
+
+Rebooting with a full /var filesystem has historically caused problems with servers coming back up.
+Check your filesystem space and act accordingly.
+
+- Check filesystem usage
+     ```bash
+     df -h /var
+     ```
+- Depending on your environment, there could be additional filesytems that could hinder reboot. To check the rest of the filesytems.
+     ```bash
+     df -h
+     ```
+- If the list from the standard `df -h` is unmanagable to look through due to extra `tmpfs, overlay, shm, snap filesystems`. They can be excluded with the below
+    ```bash
+    df -h -x <filesystem type> [-x <filesystem type> ...]
+    ```
