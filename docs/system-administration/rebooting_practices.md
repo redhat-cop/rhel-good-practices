@@ -58,7 +58,7 @@ Check the scheduling of jobs and schedule the reboot accordingly.
 Rebooting with a full /var filesystem has historically caused problems with servers coming back up.
 Check your filesystem space and act accordingly.
 
-- List currently scheduled jobs. 
+- Check filesystem usage
      ```bash
      df -h
      ```
