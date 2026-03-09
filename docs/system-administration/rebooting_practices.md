@@ -66,7 +66,7 @@ Check your filesystem space and act accordingly.
      ```bash
      df -h
      ```
-- If the list from the standard `df -h` is unmanagable to look through due to extra `tmpfs, overlay, shm, snap filesystems`. The can be excluded with the below
+- If the list from the standard `df -h` is unmanagable to look through due to extra `tmpfs, overlay, shm, snap filesystems`. They can be excluded with the below
     ```bash
     df -h -x <filesystem type> [-x <filesystem type> ...]
     ```
