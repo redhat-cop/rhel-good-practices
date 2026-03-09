@@ -1,10 +1,10 @@
 # Command Line Assistant - RHEL Lightspeed
 
-Command Line Assistant (CLA) is part of RHEL Lightspeed (link) and it is an AI Assistant, augmented with Red Hat Documentation, KB Articles, best practices. It is available for installation since RHEL 9.6 and RHEL 10.0.
+Command Line Assistant (CLA) is part of RHEL and is an AI assistant augmented with Red Hat Documentation, KB Articles, and best practices. It is available for installation since RHEL 9.6 and RHEL 10.0.
 
 This article wants to highlight some best practices and suggestions to make an effective and safe use of this technology.
 
-## Main use cases for Command Line Assistant - RHEL Lightspeed
+## Main use cases for Command Line Assistant
 
 CLA usage can support junior and seasoned sysadmins in their day-by-day job, but not only that!
 
@@ -17,7 +17,7 @@ It can be a good partner to:
 
 In the next sections, we will provide some suggestions on how to use CLA efficiently and securely.
 
-## Providing context to Command Line Assistant - RHEL Lightspeed
+## Providing context to Command Line Assistant
 
 Context is crucial for LLMs and so it is for Command Line Assistant - RHEL Lightspeed, and it can drastically increase the accuracy of its answers.
 
