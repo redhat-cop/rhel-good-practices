@@ -9,6 +9,11 @@ The method followed to reboot a system can significantly impact whether the proc
 
 Considerations before rebooting a system.
 
+**0. Check if a reboot is required**
+
+Install the `dnf-utils` package, which provides the `needs-restarting` command.
+After updating the system packages, run the `needs-restarting -r` command to see if a restart is required.
+
 **1. Active Users**
 
 Minimise disruption for logged in users by notifying them about the reboot.
