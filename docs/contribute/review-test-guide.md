@@ -23,7 +23,7 @@ podman build -t mkdocs-testing .
 
 ### Running the container
 
-??? warning "**Read here if you are reviewing a Pull Request**"
+!!! warning "**Read here if you are reviewing a Pull Request**"
     When reviewing a pull request, you need to create a temporary branch and fetch the content into it.
     Assuming user **kubealex** proposed a Pull Request involving the **testing** branch:
     ```bash
@@ -35,7 +35,7 @@ After the image is built, simply run the container mounting the current folder:
 
 ```bash
 export HOST_PORT=8000
-podman run -it --user $(id -u) --network podman -p $HOST_PORT:8000 -v ./:/opt/app-root/src:rw,Z mkdocs-testing
+podman run -it --userns=keep-id:uid=$(id -u),gid=$(id -u) --network podman -p $HOST_PORT:8000 -v ./:/opt/app-root/src:rw,Z mkdocs-testing
 ```
 
 Replace the **HOST_PORT** variable with a free port on the host you are running the container.
