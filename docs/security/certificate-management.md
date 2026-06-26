@@ -15,10 +15,12 @@ As most runtimes now use the operating systems trust store by default, adding th
 ## Good practice
 
 As these CA certificates usually do not change very frequently the recommended practice on how to distribute these certificates is by packaging them up as an RPM and install them as part of the SOE. 
+
 An alternative approach is to utilize a Configuration Management Tool, like Ansible. This also allows to update CA certificates in situations, where the connection to the repository server is via HTTPS, the certificates of the same CA are used, and the process is unstable, so the CA validity may break the rpm based process.
 
 ## References
 
 Additional details about the RHEL system trust store and how to add additional certificates to it is available in the
-[RHEL9 documentation](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/securing_networks/using-shared-system-certificates_securing-networks).
+[RHEL9 documentation](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/securing_networks/using-shared-system-certificates_securing-networks)
+and
 [RHEL10 documentation](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/securing_networks/using-shared-system-certificates)
