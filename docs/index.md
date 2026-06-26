@@ -9,4 +9,5 @@ This page gathers various good practices, but it does not:
 * Replace Red Hat's official documentation.
 * Replace Red Hat support
 * Provide a definite answer for something. We deal with good practices, meaning there may be multiple ways to do something.
-
+   + Explain the work, especially if there are multiple options.  Describe the though process supporting why a particular setting was used
+   + When appropriate, point out "bad idea" items.  For example, it is a "bad idea" to set selinux to disabled.
